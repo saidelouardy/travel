@@ -17,58 +17,138 @@ class _OndoardoneState extends State<Ondoardone> {
     return Scaffold(
       body: Container(
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 400,
+          children: [
+// image
+            Expanded(
+              flex: 3,
+              child: Container(
+                // margin: EdgeInsets.only(bottom: 10),
+                // height: 400,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
                       bottomRight: Radius.circular(30)),
                   image: DecorationImage(
-                    fit: BoxFit.cover,
                     image: AssetImage("images/one.png"),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                margin: const EdgeInsets.all(10),
-                alignment: Alignment.center,
-                child: Column(
+            ),
+//finish image
+// text title
+            Expanded(
+              flex: 0,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                // margin: EdgeInsets.only(bottom: 10, top: 10),
+                child: Stack(
                   children: [
-                    Row(
-                      children: [
-                        Text("life is short and the world is",
-                            style: Theme.of(context).textTheme.labelLarge),
-                        Text("Wide",
-                            style: Theme.of(context).textTheme.labelLarge),
-                      ],
-                    ),
                     Text(
-                        "At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world",
-                        style: Theme.of(context).textTheme.labelSmall),
+                      "life is short and the world is",
+                      style: Theme.of(context).textTheme.labelLarge,
+                      textAlign: TextAlign.center,
+                    ),
+                    Positioned(
+                      bottom: 3,
+                      right: 40,
+                      child: Text(
+                        "wide",
+                        style: Theme.of(context).textTheme.labelMedium,
+                        textAlign: TextAlign.center,
+                      ),
+                    )
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 10,
+            ),
+// finish
+// text tow
+            Expanded(
+              flex: 0,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                margin: EdgeInsets.only(bottom: 10, top: 10),
+                child: Text(
+                    "At Friends tours and travel, we customize reliable and trutworthy educational tours to destinations all over the world",
+                    style: Theme.of(context).textTheme.labelSmall,
+                    textAlign: TextAlign.center),
               ),
-              Row(
-                children: [
-                  Card(
-                    child: Container(
-                      width: 5,
-                      height: 20,
+            ),
+// finish
+// desing move
+            Expanded(
+              flex: 0,
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 10,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(30)),
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      width: 3,
+                    ),
+                    Container(
+                      height: 10,
+                      width: 20,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[350],
+                          borderRadius: BorderRadius.circular(30)),
+                    ),
+                    const SizedBox(
+                      width: 3,
+                    ),
+                    Container(
+                      height: 10,
+                      width: 10,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[350],
+                          borderRadius: BorderRadius.circular(30)),
+                    ),
+                  ],
+                ),
+// finish
+// button
               ),
-            ]),
+            ),
+            Expanded(
+              flex: 0,
+              child: Container(
+                padding: EdgeInsets.only(bottom: 15),
+                margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10)),
+                child: MaterialButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Get Started",
+                  ),
+                ),
+              ),
+            ),
+// finish
+// desing
+            Expanded(
+              flex: 0,
+              child: Container(
+                height: 10,
+                width: 300,
+                margin: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(30)),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
