@@ -12,23 +12,23 @@ class Travenor extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: TextTheme(
-          labelLarge: const TextStyle(
+        textTheme: const TextTheme(
+          labelLarge: TextStyle(
             color: Colors.black,
             fontSize: 30,
             fontFamily: "fontone",
           ),
-          labelMedium: const TextStyle(
+          labelMedium: TextStyle(
             color: Colors.orange,
             fontSize: 30,
             fontFamily: "fontone",
           ),
           labelSmall: TextStyle(
-            color: Colors.grey[600],
+            color: Colors.grey,
             fontSize: 22,
             fontFamily: "fontone",
           ),
-          titleLarge: const TextStyle(
+          titleLarge: TextStyle(
             color: Colors.white,
             fontSize: 30,
             fontFamily: "fontone",

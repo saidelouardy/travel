@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:shop/onboardone.dart';
+import 'package:shop/onbord/onboardone.dart';
 
 void main() {
   runApp(Splash());
